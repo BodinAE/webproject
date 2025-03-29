@@ -1,0 +1,18 @@
+body {
+    color: white;
+    background-image: url("../img/wallpaperdark.png");
+    background-size: cover;
+}
+
+#Blue {
+    color: rgb(179, 179, 255);
+}
+
+.Red {
+    color: rgb(255, 159, 159);
+}
+
+.Big {
+    font-size: 96;
+    
+}

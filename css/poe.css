@@ -1,0 +1,14 @@
+body {
+    background-image: url("../img/bookshelf.jpg");
+}
+.main-div {
+    background-color: rgb(21, 21, 22);
+    color: rgb(180, 180, 174);
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+pre {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
