@@ -6,16 +6,18 @@ function goToSlide(index) {
     if (index < 0) {    /*&lt;*/
         index = carouselItems.length - 1;
     }
-    else if (index > carouselItems.length) {
+    else if (index >= carouselItems.length) {
         index = 0;
     }
     currentIndex = index;
 
-    
-    document.getElementsByClassName('destination-list').style.transform = 'translateX(-${currentIndex * 100}%)';
+    // console.log(index)
+    var list = document.getElementsByClassName('destination-list')
+    list[0].style.transform = 'translateX(-'+ currentIndex * (100/carouselItems.length) +'%)';
+    console.log(list[0].style.transform)
 }
 function goToNextSlide() {
-    
+    // console.log(currentIndex + 1)
     goToSlide(currentIndex + 1);
 
 }
@@ -24,4 +26,4 @@ function goToPrevSlide() {
     goToSlide(currentIndex - 1)
 }
 
-setInterval(goToNextSlide, 10000)
+setInterval(goToNextSlide, 5000)
