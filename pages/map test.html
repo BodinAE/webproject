@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Map</title>
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map { height: 400px; width: 600px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([55.752023, 37.615401], 15); // Москва, zoom 15
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    L.marker([55.752023, 37.615401]).addTo(map);
+    function test(x, y) {
+        map.setView([48.8566, 2.3522], 13);
+      
+      // Добавляем маркер в Париже
+      L.marker([48.8566, 2.3522]).addTo(map)
+        .bindPopup("Париж").openPopup();
+    }
+  </script>
+
+  <button onclick="test(40, 70)"></button>
+</body>
+</html>
