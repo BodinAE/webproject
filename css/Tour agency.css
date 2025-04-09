@@ -4,6 +4,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden;
 }
 
 a {
@@ -183,6 +184,11 @@ header nav ul li a:hover {
     font-size: 1.5em;
     margin: 10px 0;
 }
+#map { 
+    height: 600px; 
+    width: 800px; 
+    margin:auto;
+}
 
 /* Contact Section */
 .contact {
@@ -229,6 +235,7 @@ header nav ul li a:hover {
 .contact button:hover {
     background-color: #e64a19;
 }
+
 
 /* Footer */
 footer {

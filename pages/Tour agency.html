@@ -6,6 +6,7 @@
     <title>Adventure Tours - Explore the World</title>
     <meta name="description" content="Adventure Tours offers the best travel experiences around the world. Explore exotic destinations with us!">
     <link rel="stylesheet" href="..\css\Tour agency.css">
+    
     <script src="../js/tour_agency.js">
         // let currentIndex = 0
         
@@ -37,6 +38,7 @@
         
         // setInterval(goToNextSlide, 100)
         </script>
+       
 </head>
 <body>
     <!-- Header Section -->
@@ -112,7 +114,20 @@
                 </div>
             </div>
         </div>
-        <a href="destinations.html" class="cta-button">See All Destinations</a>
+        
+        <div id="map">
+
+        </div>
+        <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/tour_agency_map.js"></script>
+    <div class="buttons">
+        <button onclick="paris()">Paris</button>
+        <button onclick="machu()">Machu Picchu</button>
+        <button onclick="bali()">Bali</button>
+    </div>
     </section>
 
     <!-- Contact Section -->

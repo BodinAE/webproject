@@ -26,4 +26,6 @@ function goToPrevSlide() {
     goToSlide(currentIndex - 1)
 }
 
+
 setInterval(goToNextSlide, 5000)
+

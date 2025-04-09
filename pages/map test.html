@@ -15,20 +15,30 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    var map = L.map('map').setView([55.752023, 37.615401], 15); // Москва, zoom 15
+    var map = L.map('map').setView([55.752023, 37.615401], 0); // Москва, zoom 15
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     L.marker([55.752023, 37.615401]).addTo(map);
-    function test(x, y) {
+    var markers = L.markerClusterGroup()
+    function Paris() {
         map.setView([48.8566, 2.3522], 13);
       
       // Добавляем маркер в Париже
       L.marker([48.8566, 2.3522]).addTo(map)
         .bindPopup("Париж").openPopup();
     }
+    function AAA() {
+      
+        map.setView([0, 0], 13);
+      
+      // Добавляем маркер в Париже
+      L.marker([0, 0]).addTo(map)
+        .bindPopup("AAA").openPopup();
+    }
   </script>
 
-  <button onclick="test(40, 70)"></button>
+  <button onclick="Paris()">paris</button>
+  <button onclick="AAA()">AAA</button>
 </body>
 </html>
