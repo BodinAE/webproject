@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+function TimerButton () {
+  function handleClick() {
+    alert('You clicked me!');
+}
+return (
+  <button onClick={handleClick}>
+    Click me
+  </button>
+);
+}
+
 function App() {
+  var a = "gdag";
+  const handleClick = () => {
+    // implementation details
+    a = "hfd";
+    console.log(a);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Timer</h1>
+      <div className="TimerInput">
+        <label>Seconds:</label>
+        <input className="SecondsInput"type="text"></input>
+        <TimerButton/>
+   
+      </div>
+      {a}
     </div>
   );
 }
